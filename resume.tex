@@ -39,6 +39,9 @@
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
 \titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
 
+\newcommand\rightleftbox[1]{ \parbox{.30\textwidth}{#1} }
+\newcommand\centerbox[1]{ \parbox{.40\textwidth}{#1} }
+
 \begin{document}
 
 \pagestyle{empty} % Removes page numbering
@@ -51,9 +54,11 @@
 
 \par{\centering{\Huge Ryan R. \textsc{Gysin}}\bigskip\par} % Your name
 
-\par{\centering{1405 Michigan Ave, Bay City, MI, 48708 \\
-rgysin@umich.edu \\
-989 450 1867 \\ } }
+\par{
+\rightleftbox{rgysin@umich.edu\hfill}
+\centerbox{913 N York Dr, Essexville, MI, 48732}
+\rightleftbox{\hfill989 450 1867}
+}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
@@ -78,23 +83,34 @@ rgysin@umich.edu \\
 \section{Projects}
 
 \begin{tabular}{r|p{13cm}}
-\textsc{Sept 2015} & \textsc{Michigan Autonomous Aerial Vehicle (MAAV)} \\
-\emph{Current} & \emph{President and Navigation Sub Team Lead} \\
-& \footnotesize{Worked on quad-rotor that placed 2\textsuperscript{nd} in the
-  2016 International Aerial Robotics Competition} \\
-& \footnotesize{Developed computer vision code for detecting corners and
-  ground robots based on size and color} \\
-& \footnotesize{Designed code that trained computer vision software to find
-  which parameter most reduced noise while still finding all ground robots} \\
-& \footnotesize{Managed code base using git} \\
+\textsc{Apr 2017}\space\space& \textsc{MGoKart} \\
+\textsc{Jan 2017} & \footnotesize{Created autonomous gokart as concept for autonomous formula car} \\
+& \footnotesize{Developed path planning algorithms and simple kalman filter in Python} \\
+& \footnotesize{Designed hardware and communication architectures} \\
+& \footnotesize{Wrote communications code in C and Python} \\
+& \footnotesize{Wired all components to gokart} \\
 \multicolumn{2}{c}{} \\
 \end{tabular}
 
 %------------------------------------------------
 
 \begin{tabular}{r|p{13cm}}
-\textsc{Sept 2013} & \textsc{Mechanical System Design} \\
-\textsc{Dec 2014} & \footnotesize{Harnessed Rotational Momentum of bicycle to
+\textsc{Apr 2017} & \textsc{Michigan Autonomous Aerial Vehicle (MAAV)} \\
+\textsc{Sept 2015} & \footnotesize{President and Navigation Lead 2016-2017} \\
+& \footnotesize{Worked on quad-rotor that placed 2\textsuperscript{nd} in the
+  2016 International Aerial Robotics Competition} \\
+& \footnotesize{Developed computer vision code for detecting corners and
+  ground robots based on size and color} \\
+& \footnotesize{Designed code that tuned computer vision software to reduce noise} \\
+& \footnotesize{Managed entire team code base using git} \\
+\multicolumn{2}{c}{} \\
+\end{tabular}
+
+%------------------------------------------------
+
+\begin{tabular}{r|p{13cm}}
+\textsc{Dec	2014} & \textsc{Mechanical System Design} \\
+\textsc{Sept 2013} & \footnotesize{Harnessed Rotational Momentum of bicycle to
   light a light bulb using chain linkages and magnetic induction} \\
 & \footnotesize{Prioritized money vs. performance as well as budgeted time} \\
 \multicolumn{2}{c}{} \\
@@ -107,16 +123,19 @@ rgysin@umich.edu \\
 \section{Work Experience}
 
 \begin{tabular}{r|p{13cm}}
-\textsc{May 2016} & \textsc{Nexteer Automotive}, Saginaw, MI \\
-\textsc{Aug 2016} & \emph{Software Engineering Intern} \\
-& \footnotesize{Designed C\# applications to interface with SQL databases} \\
-& \footnotesize{Worked in Manufacturing IT to trace parts through machine processes} \\
+\emph{Current} & \textsc{Nexteer Automotive}, Saginaw, MI \\
+\textsc{July 2017} & \emph{Manufacturing IT Engineer} \\
+& \footnotesize{Interned summer of 2016, went on to take internship as full time job}\\
+\textsc{Aug 2016} & \footnotesize{Designed C\# applications to interface with SQL databases} \\
+\textsc{May 2016} & \footnotesize{Worked in Manufacturing IT to trace parts through machine processes} \\
 \multicolumn{2}{c}{} \\
 \end{tabular}
 
+%------------------------------------------------
+
 \begin{tabular}{r|p{13cm}}
-\textsc{July 2014} & \textsc{U of M Parking and Transportation Services}, Ann Arbor, MI\\
-\textsc{May 2017} & \emph{Bus Driver} \\
+\textsc{May 2017} & \textsc{U of M Parking and Transportation Services}, Ann Arbor, MI\\
+\textsc{July 2014} & \emph{Bus Driver} \\
 & \footnotesize{Responsible for the transportation and well being of hundreds
   of students daily} \\
 & \footnotesize{Learned to manage different personalities through communicating
@@ -127,13 +146,12 @@ rgysin@umich.edu \\
 %------------------------------------------------
 
 \begin{tabular}{r|p{13cm}}
-\textsc{Sept 2013} & \textsc{U of M Mechanical Engineering Department}, Ann Arbor, MI \\
-\textsc{Aug 2014} & \emph{Research Assistant to Prof. Eric Johnson} \\
+\textsc{Aug 2014} & \textsc{U of M Mechanical Engineering Department}, Ann Arbor, MI \\
+\textsc{Sept 2013} & \emph{Research Assistant to Prof. Eric Johnson} \\
 & \footnotesize{Created GUI to model bubble cavitation in a viscoelastic media} \\
 & \footnotesize{Gained understanding of Matlab scripting and GUI's} \\
 \multicolumn{2}{c}{} \\
 \end{tabular}
-
 
 %----------------------------------------------------------------------------------------
 %	SKILLS
