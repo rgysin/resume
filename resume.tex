@@ -23,24 +23,24 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[a4paper,10pt]{article} % Default font size and paper size
-
-\usepackage{fontspec} % For loading fonts
-\defaultfontfeatures{Mapping=tex-text}
-%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin} % Main document font
+\documentclass[a4paper,11pt]{article} % Default font size and paper size
 
 \usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
 
 \usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
 
-\usepackage{fullpage}
+\usepackage[margin=.5in]{geometry}
+
+\usepackage{multirow}
+
+\renewcommand{\familydefault}{\sfdefault}
 
 \usepackage{titlesec} % Used to customize the \section command
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
 \titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
 
-\newcommand\rightleftbox[1]{ \parbox{.30\textwidth}{#1} }
-\newcommand\centerbox[1]{ \parbox{.40\textwidth}{#1} }
+\newcommand\rightleftbox[1]{ \parbox{.3\textwidth}{#1} }
+\newcommand\centerbox[1]{ \parbox{.4\textwidth}{#1} }
 
 \begin{document}
 
@@ -52,13 +52,8 @@
 %	NAME AND CONTACT INFORMATION
 %----------------------------------------------------------------------------------------
 
-\par{\centering{\Huge Ryan R. \textsc{Gysin}}\bigskip\par} % Your name
-
-\par{
-\rightleftbox{rgysin@umich.edu\hfill}
-\centerbox{913 N York Dr, Essexville, MI, 48732}
-\rightleftbox{\hfill989 450 1867}
-}
+\par{\centering{\Huge Ryan R. Gysin}\par} % Your name
+\par{\centering{rgysin@umich.edu | 913 N York Dr, Essexville, MI, 48732 | 989-450-1867}\par}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
@@ -67,8 +62,8 @@
 \section{Education}
 
 \begin{tabular}{r|p{12cm}}
-\hspace{4pt}\textsc{Apr} 2017& Undergraduate Degree in \textsc{Computer Engineering} \\
-& \normalsize\emph{University of Michigan (U of M)}, Ann Arbor \\
+\hspace{4pt}\textsc{Apr} 2017 & Bachelor of Science in \textsc{Computer Engineering} \\
+& \normalsize\emph{University of Michigan}, Ann Arbor \\
 & \footnotesize{Relevant Classes: Operating Sytems, Machine Learning,
   Microprocessor Design, Embedded Control Systems, Computer Security,
   Logic Design, Computer Organization, Signals and Systems,
@@ -85,24 +80,13 @@
 \begin{tabular}{r|p{13cm}}
 \hspace{4pt}\textsc{Apr 2017} & \textsc{MGoKart} \\
 \textsc{Jan 2017} & \footnotesize{Created autonomous gokart as concept for autonomous formula car} \\
-& \footnotesize{Developed path planning algorithms and simple kalman filter in Python} \\
-& \footnotesize{Designed hardware and communication architectures} \\
-& \footnotesize{Wrote communications code in C and Python} \\
-& \footnotesize{Wired all components to gokart} \\
-\multicolumn{2}{c}{} \\
-\end{tabular}
-
-%------------------------------------------------
-
-\begin{tabular}{r|p{13cm}}
-\textsc{Apr 2017} & \textsc{Michigan Autonomous Aerial Vehicle (MAAV)} \\
-\textsc{Sept 2015} & \footnotesize{President and Navigation Lead 2016-2017} \\
-& \footnotesize{Worked on quad-rotor that placed 2\textsuperscript{nd} in the
-  2016 International Aerial Robotics Competition} \\
-& \footnotesize{Developed computer vision code for detecting corners and
-  ground robots based on size and color} \\
-& \footnotesize{Designed code that tuned computer vision software to reduce noise} \\
-& \footnotesize{Managed entire team code base using git} \\
+& \footnotesize{Developed path planning algorithms and simple kalman filter in
+  Python to steer the kart and filter out erroneous data from sensor suite} \\
+& \footnotesize{Designed hardware and communication architectures to allow
+  power distribution and communication between central microprocessor and motors} \\
+& \footnotesize{Wrote communications code in C, Python, and Arduino to allow
+  communication between the software algorithms, controls algorithms, and motors} \\
+& \footnotesize{Minimized noise in wires across the kart} \\
 \multicolumn{2}{c}{} \\
 \end{tabular}
 
@@ -112,6 +96,8 @@
 \textsc{Dec	2014} & \textsc{Mechanical System Design} \\
 \textsc{Sept 2013} & \footnotesize{Harnessed Rotational Momentum of bicycle to
   light a light bulb using chain linkages and magnetic induction} \\
+& \footnotesize{Designed and built truss system to support weight of bicycle
+  and rider, as well as horizontal forces caused by pedaling} \\
 & \footnotesize{Prioritized money vs. performance as well as budgeted time} \\
 \multicolumn{2}{c}{} \\
 \end{tabular}
@@ -125,21 +111,42 @@
 \begin{tabular}{r|p{13cm}}
 \emph{Current} & \textsc{Nexteer Automotive}, Saginaw, MI \\
 \textsc{July 2017} & \emph{Manufacturing IT Engineer} \\
-& \footnotesize{Interned summer of 2016, went on to take internship as full time job}\\
-\textsc{Aug 2016} & \footnotesize{Designed C\# applications to interface with SQL databases} \\
-\textsc{May 2016} & \footnotesize{Worked in Manufacturing IT to trace parts through machine processes} \\
+& \footnotesize{Co-led C\# development training session specializing in WPF and .NET frameworks}\\
+\textsc{Aug 2016} & \footnotesize{Designed C\# applications to act as interface
+  between PLC's and SQL databases} \\
+\textsc{May 2016} & \footnotesize{Developed PLC routines to communicate with C\#
+  application and make decisions about whether or not the part meets specifications} \\
+& \footnotesize{Maintained computers running on plant floor to reduce down time
+  of plant lines} \\
 \multicolumn{2}{c}{} \\
 \end{tabular}
 
 %------------------------------------------------
 
 \begin{tabular}{r|p{13cm}}
-\textsc{May 2017} & \textsc{U of M Parking and Transportation Services}, Ann Arbor, MI\\
-\textsc{July 2014} & \emph{Bus Driver} \\
+\textsc{Apr 2017} & \textsc{Michigan Autonomous Aerial Vehicle (MAAV)} \\
+\textsc{Sept 2015} & \emph{President and Navigation Lead 2016-2017} \\
+& \footnotesize{Led team to place 2\textsuperscript{nd} in the 2016
+  International Aerial Robotics Competition (IARC)} \\
+& \footnotesize{Developed computer vision code for detecting corners and
+  ground robots based on size and color} \\
+& \footnotesize{Designed and tested code that tuned computer vision software to
+  reduce noise in images} \\
+& \footnotesize{Organized team structure and led weekly meetings to keep
+  sub-team communcation} \\
+& \footnotesize{Managed entire team code base using git} \\
+\multicolumn{2}{c}{} \\
+\end{tabular}
+
+%------------------------------------------------
+
+\begin{tabular}{r|p{13cm}}
+\textsc{Apr 2017} & \textsc{U of M Parking and Transportation Services}, Ann Arbor, MI\\
+\textsc{July 2014} & \emph{Bus Operator} \\
 & \footnotesize{Responsible for the transportation and well being of hundreds
   of students daily} \\
 & \footnotesize{Learned to manage different personalities through communicating
-  with passengers frustrated about delays} \\
+  with simultaneously with passengers frustrated about delays, other drivers, and dispatch} \\
 \multicolumn{2}{c}{} \\
 \end{tabular}
 
@@ -147,9 +154,8 @@
 
 \begin{tabular}{r|p{13cm}}
 \textsc{Aug 2014} & \textsc{U of M Mechanical Engineering Department}, Ann Arbor, MI \\
-\textsc{Sept 2013} & \emph{Research Assistant to Prof. Eric Johnson} \\
-& \footnotesize{Created GUI to model bubble cavitation in a viscoelastic media} \\
-& \footnotesize{Gained understanding of Matlab scripting and GUI's} \\
+\textsc{Sept 2013} & \emph{Research Assistant to Dr. Eric Johnsen} \\
+& \footnotesize{Created GUI to model bubble cavitation in a viscoelastic media using Matlab} \\
 \multicolumn{2}{c}{} \\
 \end{tabular}
 
@@ -157,11 +163,12 @@
 %	SKILLS
 %----------------------------------------------------------------------------------------
 
-\section{Skills}
+\section{Additional}
 
-\begin{tabular}{rl}
-Languages: & C++, C, C\#, \LaTeX, Python, SQL, Verilog, Ruby, Mathematica \\
-Tools: & Git, Matlab, OpenCV
+\begin{tabular}{ll}
+Languages: & C++, C, C\#, Python, SQL, \LaTeX, Verilog, Ruby \\
+Tools: & Git, Matlab, OpenCV \\
+\multicolumn{2}{l}{Traveled around the world in 48 days}\\
 \end{tabular}
 
 \clearpage % Force Page Break
