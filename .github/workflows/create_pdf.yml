@@ -7,14 +7,15 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to Compile Latex file
     steps:
-    - name: LaTeX compilation
-      uses: dante-ev/latex-action@v0.2.0
-      with:
-        # The root LaTeX file to be compiled
-        root_file: rgysin_resume.tex
-        # LaTeX engine to be used
-        args: -xelatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
-    - name: PDF Push
-      uses: ad-m/github-push-action@v0.5.0
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v1
+      - name: LaTeX compilation
+        uses: dante-ev/latex-action@v0.2.0
+        with:
+          # The root LaTeX file to be compiled
+          root_file: rgysin_resume.tex
+          # LaTeX engine to be used
+          args: -xelatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
+      - name: PDF Push
+        uses: ad-m/github-push-action@v0.5.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
