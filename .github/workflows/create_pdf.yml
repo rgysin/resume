@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to Compile Latex file
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@master
     - name: LaTeX compilation
       uses: dante-ev/latex-action@v0.2.0
       with:
@@ -15,3 +15,7 @@ jobs:
         root_file: rgysin_resume.tex
         # LaTeX engine to be used
         args: -xelatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
+    - name: Push PDF to master
+    - uses: mikeal/publish-to-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
