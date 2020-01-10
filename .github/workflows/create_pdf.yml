@@ -1,3 +1,5 @@
+name: Create PDF
+
 on: [push]
 
 jobs:
@@ -10,6 +12,6 @@ jobs:
       uses: dante-ev/latex-action@v0.2.0
       with:
         # The root LaTeX file to be compiled
-        root_file: 'rgysin-resume.tex'
+        root_file: rgysin-resume.tex
         # LaTeX engine to be used
-        args: '-xelatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode'
+        args: -xelatex -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
