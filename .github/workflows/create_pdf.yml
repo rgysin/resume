@@ -11,5 +11,5 @@ jobs:
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tex_path: 'rygysin-resume.tex'
+        tex_path: 'rgysin-resume.tex'
         push: 'yes'
