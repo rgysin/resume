@@ -1,45 +1,29 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Plasmati Graduate CV
-% LaTeX Template
-% Version 1.0 (24/3/13)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Alessandro Plasmati (alessandro.plasmati@gmail.com)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-% Important note:
-% This template needs to be compiled with XeLaTeX.
-% The main document font is called Fontin and can be downloaded for free
-% from here: http://www.exljbris.com/fontin.html
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \documentclass[a4paper,12pt]{article} % Default font size and paper size
 
 \usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
 \usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
-\usepackage[left=.5in,right=.5in,top=.4in,bottom=.4in]{geometry}
+\usepackage[left=.4in,right=.4in,top=.4in,bottom=.4in]{geometry}
 \usepackage[none]{hyphenat}
 \usepackage{multirow}
 
 \usepackage{array}
-\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
-\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{L}[1]
+ {>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]
+ {>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]
+ {>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
 \renewcommand{\familydefault}{\sfdefault}
 
 \usepackage{titlesec} % Used to customize the \section command
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+
+% Text formatting of sections
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
 
 \newcommand\rightleftbox[1]{ \parbox{.3\textwidth}{#1} }
@@ -49,23 +33,25 @@
 
 \pagestyle{empty} % Removes page numbering
 
-\font\fb=''[cmr10]'' % Change the font of the \LaTeX command under the skills section
+\font\fb=''[cmr10]'' % Change the font of the \LaTeX command
 
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
-\par{\centering{\Huge Ryan R. Gysin}\par} % Your name
-\par{\centering{gysin.ryan@gmail.com | 317 18th Ave E. Apt 3, Seattle, WA, 98112 | 989-450-1867}\par}
+\par{\centering{\Huge Ryan R. Gysin}\par}
+\par{\centering{gysin.ryan@gmail.com | 317 18th Ave E. Apt 3, Seattle, WA, 98112
+  | 989-450-1867}\par}
 
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 %	EDUCATION
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \section{Education}
 
 \begin{tabular}{R{2.1cm}|p{15.5cm}}
-\hspace{4pt}\textsc{Apr} 2017 & Bachelor of Science in \textsc{Computer Engineering} \\
+\hspace{4pt}\textsc{Apr} 2017 & Bachelor of Science in
+ \textsc{Computer Engineering} \\
 & \normalsize\emph{University of Michigan}, Ann Arbor \\
 & \footnotesize{Relevant Classes: Operating Systems, Machine Learning,
   Microprocessor Design, Embedded Control Systems, Computer Security,
@@ -73,20 +59,21 @@
 & \footnotesize{GPA: 3.0/4.0} \\
 \end{tabular}
 
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 %	WORK EXPERIENCE
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \section{Experience}
 
 \begin{tabular}{R{2.1cm}|p{15.5cm}}
 \emph{Current} & \textsc{Microsoft}, Redmond, WA \\
 \textsc{Nov 2018} & \emph{Software Engineer} \\
-& \footnotesize{Contributed to the Windows build system} \\
-& \footnotesize{Wrote unit tests for creation of Windows installable media} \\
+& \footnotesize{Reduced build failures by 90\% by isolating imaging jobs in
+  Azure VMs} \\
+& \footnotesize{Updated job scheduler to support different worker node types} \\
 \end{tabular}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \begin{tabular}{R{2.1cm}|p{15.5cm}}
 \textsc{Oct 2018} & \textsc{Nexteer Automotive}, Saginaw, MI \\
@@ -96,17 +83,22 @@
 \textsc{Aug 2016} & \footnotesize{Wrote LabVIEW VIs to decode JSON messages
   and transmit them through TCP sockets}\\
 \textsc{May 2016} & \footnotesize{Developed PLC routines to communicate with C\#
-  application and make decisions about whether or not a part meets specifications} \\
+  application and make decisions about whether or not a part meets
+  specifications} \\
 & \footnotesize{Co-led C\# development training session specializing in WPF and
  .NET frameworks}\\
 & \footnotesize{Maintained computers running on plant floor to reduce down time
   of plant lines} \\
 \end{tabular}
 
-%------------------------------------------------
+%-------------------------------------------------------------------------------
+%	PROJECTS
+%-------------------------------------------------------------------------------
+
+\section{Projects}
 
 \begin{tabular}{R{2.1cm}|p{15.5cm}}
-\textsc{Apr 2017} & \textsc{Michigan Autonomous Aerial Vehicle (MAAV)}, Ann Arbor, MI\\
+\textsc{Apr 2017} & \textsc{Michigan Autonomous Aerial Vehicle (MAAV)} \\
 \textsc{Sept 2015} & \emph{President and Navigation Lead 2016-2017} \\
 & \footnotesize{Led team of 40 to place 2\textsuperscript{nd} in the 2016
   International Aerial Robotics Competition (IARC)} \\
@@ -121,11 +113,7 @@
 & \footnotesize{Managed and reviewed entire team code base using git} \\
 \end{tabular}
 
-%----------------------------------------------------------------------------------------
-%	PROJECTS
-%----------------------------------------------------------------------------------------
-
-\section{Projects}
+%-------------------------------------------------------------------------------
 
 \begin{tabular}{R{2.1cm}|p{15.5cm}}
 \hspace{4pt}\textsc{Apr 2017} & \textsc{MGoKart} \\
@@ -145,21 +133,22 @@
  vehicle dynamics model} \\
 \end{tabular}
 
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 %	SKILLS
-%----------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
 \section{Additional}
 
 \begin{tabular}{ll}
 Languages: & C++, C, C\#, Python, T-SQL, \LaTeX, Verilog, Ruby \\
-Tools: & Git, Matlab, LabVIEW, OpenCV \\
+Tools: & Git, Matlab, LabVIEW \\
 \multicolumn{2}{l}{Assisted in research resulting in childrens book about
   cavitation bubbles}\\
 \multicolumn{2}{l}{Drove U of M blue buses for 3 years while in college}\\
 \end{tabular}
 
 \clearpage % Force Page Break
-%------------------------------------------------
+
+%-------------------------------------------------------------------------------
 
 \end{document}
