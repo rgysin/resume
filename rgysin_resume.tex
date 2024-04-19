@@ -6,7 +6,7 @@
 
 \usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
 \usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
-\usepackage[left=2.1cm,right=2.1cm,top=2.97cm,bottom=2.97cm]{geometry}
+\usepackage[left=2.54cm,right=2.54cm,top=2.54cm,bottom=2.54cm]{geometry}
 \usepackage[none]{hyphenat}
 \usepackage{multirow}
 
@@ -26,14 +26,9 @@
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
 
-\newcommand\rightleftbox[1]{ \parbox{.3\textwidth}{#1} }
-\newcommand\centerbox[1]{ \parbox{.4\textwidth}{#1} }
-
 \begin{document}
 
 \pagestyle{empty} % Removes page numbering
-
-\font\fb=''[cmr10]'' % Change the font of the \LaTeX command
 
 %-------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION
@@ -44,19 +39,17 @@
  Seattle, WA, 98103
   | 989-450-1867}\par}
 
+\vspace{10pt} % Add some space betweeen header and first section
+
 %-------------------------------------------------------------------------------
 %	EDUCATION
 %-------------------------------------------------------------------------------
 
 \section{Education}
 
-\begin{tabular}{R{2.1cm}|p{14cm}}
-\hspace{4pt}\textsc{Apr} 2017 & Bachelor of Science in
- \textsc{Computer Engineering} \\
+\begin{tabular}{R{2.1cm}|L{13.0cm}}
+\textsc{Apr 2017} & Bachelor of Science in \textsc{Computer Engineering} \\
 & \normalsize\emph{University of Michigan}, Ann Arbor \\
-& \footnotesize{Relevant Classes: Operating Systems, Machine Learning,
-  Microprocessor Design, Embedded Control Systems, Computer Security,
-  Logic Design, Computer Organization, Signals and Systems}\\
 \end{tabular}
 
 %-------------------------------------------------------------------------------
@@ -65,8 +58,18 @@
 
 \section{Experience}
 
-\begin{tabular}{R{2.1cm}|p{14cm}}
-\emph{Current} & \textsc{Microsoft}, Redmond, WA \\
+\begin{tabular}{R{2.1cm}|L{13.0cm}}
+\emph{Current} & \textsc{The Boeing Company}, Tukwila, WA \\
+\textsc{July 2023} & \emph{Real Time Software Engineer} \\
+& \footnotesize{Updated track fusion software to latest Open Mission Systems standard} \\
+& \footnotesize{Implemented communication protocol with track identification application} \\
+
+\end{tabular}
+
+%-------------------------------------------------------------------------------
+
+\begin{tabular}{R{2.1cm}|L{13.0cm}}
+\textsc{May 2023} & \textsc{Microsoft}, Redmond, WA \\
 \textsc{Nov 2018} & \emph{Software Engineer II} \\
 & \footnotesize{Designed WinRT API for Microsoft reverse debugger} \\
 & \footnotesize{Updated Application Verifier to allow it to run on ARM64 processors} \\
@@ -76,7 +79,7 @@
 
 %-------------------------------------------------------------------------------
 
-\begin{tabular}{R{2.1cm}|p{14cm}}
+\begin{tabular}{R{2.1cm}|L{13.0cm}}
 \textsc{Oct 2018} & \textsc{Nexteer Automotive}, Saginaw, MI \\
 \textsc{July 2017} & \emph{Manufacturing IT Engineer} \\
 & \footnotesize{Designed C\# applications to act as interface
@@ -84,7 +87,7 @@
 \textsc{Aug 2016} & \footnotesize{Wrote LabVIEW VIs to decode JSON messages
   and transmit them through TCP sockets}\\
 \textsc{May 2016} & \footnotesize{Developed PLC routines to communicate with C\#
-  application and validate part specifications} \\
+  app and validate part specifications} \\
 & \footnotesize{Co-led C\# development training session specializing in WPF and
  .NET frameworks}\\
 \end{tabular}
@@ -95,28 +98,21 @@
 
 \section{Projects}
 
-\begin{tabular}{R{2.1cm}|p{14cm}}
+\begin{tabular}{R{2.1cm}|L{13.0cm}}
 \textsc{Apr 2017} & \textsc{Michigan Autonomous Aerial Vehicle (MAAV)} \\
 \textsc{Sept 2015} & \emph{President and Navigation Lead 2016-2017} \\
 & \footnotesize{Led team of 40 to place 2\textsuperscript{nd} in the 2016
-  International Aerial Robotics Competition (IARC)} \\
-& \footnotesize{Developed computer vision code for detecting corners and
-  ground robots based on size and color} \\
-& \footnotesize{Organized team structure and led weekly meetings to ensure all
-  sub-teams were on track} \\
-& \footnotesize{Acquired corporate sponsorship totaling \$40k and managed annual
-  budget} \\
-& \footnotesize{Managed and reviewed entire team code base using git} \\
+  International Aerial Robotics Competition} \\
+& \footnotesize{Developed computer vision code for detecting grid and ground robots} \\
 \end{tabular}
 
 %-------------------------------------------------------------------------------
 
-\begin{tabular}{R{2.1cm}|p{14cm}}
-\hspace{4pt}\textsc{Apr 2017} & \textsc{MGoKart} \\
+\begin{tabular}{R{2.1cm}|L{13.0cm}}
+\textsc{Apr 2017} & \textsc{MGoKart} \\
 \textsc{Jan 2017} & \footnotesize{Created autonomous gokart as concept for
   autonomous formula car} \\
-& \footnotesize{Developed path planning algorithms in Python to steer the kart
-  and filter data from sensor suite} \\
+& \footnotesize{Developed path planning and data filtering  algorithms to steer the kart} \\
 & \footnotesize{Designed and built hardware architecture to allow power
   distribution and communication} \\
 & \footnotesize{Wrote code in C, Python, and Arduino to allow communication
@@ -134,14 +130,12 @@
 \section{Additional}
 
 \begin{tabular}{ll}
-Languages: & C++, C, C\#, Python, T-SQL, \LaTeX, Verilog \\
+Languages: & C++, C, C\#, Python, T-SQL \\
 Tools: & Git, Matlab, LabVIEW \\
 \multicolumn{2}{l}{Assisted in research resulting in childrens book about
   cavitation bubbles}\\
 \multicolumn{2}{l}{Drove U of M blue buses for 3 years while in college}\\
 \end{tabular}
-
-\clearpage % Force Page Break
 
 %-------------------------------------------------------------------------------
 
